@@ -52,8 +52,7 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += qrngd
 
 # Bootanimation
-TARGET_SCREEN_WIDTH := 800
-TARGET_SCREEN_HEIGHT := 1280
+PRODUCT_BOOTANIMATION := vendor/cm/prebuilt/common/bootanimation/800.zip
 
 # Common features
 PRODUCT_COPY_FILES += \
