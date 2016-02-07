@@ -40,9 +40,17 @@ PRODUCT_COPY_FILES += \
 
 # Ramdisk
 PRODUCT_PACKAGES += \
+    fstab.qcom \
+    init.qcom.efs.sync.sh \
     init.qcom.rc \
+    init.qcom.power.rc \
     init.target.rc \
     ueventd.qcom.rc
+
+# TWRP Recovery
+PRODUCT_PACKAGES += \
+    postrecoveryboot.sh \
+    twrp.fstab
 
 # QRNGD
 PRODUCT_PACKAGES += qrngd
@@ -50,6 +58,10 @@ PRODUCT_PACKAGES += qrngd
 # Bootanimation
 TARGET_SCREEN_WIDTH := 800
 TARGET_SCREEN_HEIGHT := 1280
+
+PRODUCT_PROPERTY_OVERRIDES += \
+    persist.audio.fluence.mode=endfire \
+    persist.audio.vr.enable=false
 
 # Common features
 PRODUCT_COPY_FILES += \
